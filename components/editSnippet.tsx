@@ -6,8 +6,8 @@ import type { Snippet } from '@prisma/client'
 import { Button } from './ui/button'
 import { saveSnippet } from '@/actions/server'
 
-const editSnippet = ({snippet}:{snippet:Snippet}) => {
-  const [code,setCode]= useState(snippet.code)
+const EditSnippet: React.FC<{ snippet: Snippet }> = ({ snippet }) => {
+  const [code, setCode] = useState(snippet.code);
 function handelCodeChange(value:string =''){
   setCode(value)
 }
@@ -33,4 +33,4 @@ function handelCodeChange(value:string =''){
   )
 }
 
-export default editSnippet
+export default EditSnippet;

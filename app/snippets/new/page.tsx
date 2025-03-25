@@ -4,12 +4,13 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
-import React, { useActionState } from 'react'
+import React  from 'react'
 import { createSnippet } from '@/actions/server'
+import { useFormState } from 'react-dom'
 
-const snippetsPage = () => {
+const SnippetsPage = () => {
 
- const [fromStateData, xyz] = useActionState(createSnippet, {message:""})
+ const [fromStateData, xyz] = useFormState(createSnippet, {message:""})
 
 
   return (
@@ -30,4 +31,4 @@ const snippetsPage = () => {
   )
 }
 
-export default snippetsPage
+export default SnippetsPage;
